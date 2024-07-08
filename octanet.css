@@ -1,0 +1,114 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #538d92;
+  color: #333;
+}
+
+/* Sticky navigation bar */
+.navbar {
+  background-color: #333;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 1em 0;
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Add some padding to the body to account for the fixed navbar */
+body {
+  padding-top: 60px; /* Adjust this value based on the height of your navbar */
+}
+
+header {
+  text-align: center;
+}
+
+section {
+  padding: 2em;
+  margin: 2em 0;
+  background-color: rgb(153, 97, 132);
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  position: relative;
+  width: 100%;
+}
+
+/* Gradient text effect */
+.heading-gradient {
+  background: linear-gradient(90deg, #0e0c0c, #feb47b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animation for headings */
+@keyframes fadeInSlideUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.heading-animation {
+  animation: fadeInSlideUp 1s ease-in-out;
+}
+
+/* Keyframes for blinking and enlarging */
+@keyframes blink-enlarge {
+  0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+  50% {
+      opacity: 0;
+      transform: scale(1.5);
+  }
+}
+
+/* Class for blinking and enlarging */
+.blink-enlarge {
+  animation: blink-enlarge 1s ease-in-out;
+}
+
+/* Media query for responsive design */
+@media (max-width: 600px) {
+  section {
+      padding: 1em;
+  }
+  
+  .navbar ul {
+      flex-direction: column;
+  }
+}
